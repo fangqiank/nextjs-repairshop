@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 import {withSentryConfig} from "@sentry/nextjs";
 
-const nextConfig = {};
+const nextConfig = {
+  experimental: {
+    nftTracing: true,
+  },
+};
 
 // Make sure adding Sentry options is the last code to run before exporting
 export default withSentryConfig(nextConfig, {
